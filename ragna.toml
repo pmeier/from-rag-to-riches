@@ -1,0 +1,22 @@
+local_cache_root = "/home/philip/.cache/ragna"
+
+[core]
+queue_url = "memory"
+document = "ragna.core.LocalDocument"
+source_storages = [
+    "ragna.source_storages.Chroma",
+]
+assistants = [
+    "ragna.assistants.Gpt35Turbo16k",
+    "local_llm.Airoboros",
+]
+
+[api]
+url = "http://127.0.0.1:31476"
+origins = ["http://127.0.0.1:31477"]
+database_url = "memory"
+authentication = "ragna.core.RagnaDemoAuthentication"
+
+[ui]
+url = "http://127.0.0.1:31477"
+origins = ["http://127.0.0.1:31477"]

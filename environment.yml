@@ -1,0 +1,15 @@
+name: from-rag-to-riches
+channels:
+  - conda-forge
+dependencies:
+  - python =3.11
+  - pip
+  - pip:
+      - auto-gptq
+      - jupyter
+      - jupyterlab-nvdashboard
+      - optimum
+      - pre-commit
+      - python-dotenv
+      - ragna[all]
+      - torch
